@@ -26,6 +26,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intentFromMainActivityToInformationOfStudentsActivity);
             }
         });
+
+        findAllView();
+
+        scheduleOfSubjects.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentScheduleOfSubject = new Intent(MainActivity.this, ScheduleOfItems.class);
+                startActivity(intentScheduleOfSubject);
+            }
+        });
     }
 
     // шукає та прив'язує кнопки
