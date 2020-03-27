@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    private Button informationToStudens;
+    private Button informationToStudents;
     private Button scheduleOfSubjects;
     private Button iformationNb;
 
@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         findAllView();
 
-        informationToStudens.setOnClickListener(new View.OnClickListener() {
+        informationToStudents.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intentFromMainActivityToInformationOfStudentsActivity = new Intent(MainActivity.this, InformationOfStudentsActivity.class);
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     // шукає та прив'язує кнопки
     private void findAllView () {
-        informationToStudens = findViewById(R.id.informationToStudensButton);
+        informationToStudents = findViewById(R.id.informationToStudentsButton);
         scheduleOfSubjects = findViewById(R.id.scheduleOfSubjectsButton);
         iformationNb = findViewById(R.id.iformationNbButton);
     }
