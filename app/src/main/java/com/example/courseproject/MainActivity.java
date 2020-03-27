@@ -2,7 +2,9 @@ package com.example.courseproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,6 +19,13 @@ public class MainActivity extends AppCompatActivity {
 
         findAllView();
 
+        informationToStudens.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentFromMainActivityToInformationOfStudentsActivity = new Intent(MainActivity.this, InformationOfStudentsActivity.class);
+                startActivity(intentFromMainActivityToInformationOfStudentsActivity);
+            }
+        });
     }
 
     // шукає та прив'язує кнопки
