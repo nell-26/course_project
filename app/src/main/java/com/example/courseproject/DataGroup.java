@@ -7,26 +7,27 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class InformIteamGroup extends AppCompatActivity {
-    private Button backSchedule;
+public class DataGroup extends AppCompatActivity {
+    private Button backNb;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_inform_iteam_group);
+        setContentView(R.layout.activity_data_group);
 
         findAllView();
 
-        backSchedule.setOnClickListener(new View.OnClickListener() {
+        backNb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentBackSchedule = new Intent(InformIteamGroup.this, MainActivity.class);
-                startActivity(intentBackSchedule);
+                Intent intentbackNb = new Intent(DataGroup.this, MainActivity.class);
+                startActivity(intentbackNb);
             }
         });
     }
 
     private void findAllView () {
-        backSchedule = findViewById(R.id.backScheduleButton);
+        backNb = findViewById(R.id.backNbButton);
     }
 }

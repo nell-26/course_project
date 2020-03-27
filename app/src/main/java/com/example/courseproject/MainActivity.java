@@ -36,6 +36,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intentScheduleOfSubject);
             }
         });
+
+        findAllView();
+
+        iformationNb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentDataNb = new Intent(MainActivity.this, DateNb.class);
+                startActivity(intentDataNb);
+            }
+        });
     }
 
     // шукає та прив'язує кнопки
