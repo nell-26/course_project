@@ -21,8 +21,8 @@ public class DataGroup extends AppCompatActivity {
         backNb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentbackNb = new Intent(DataGroup.this, MainActivity.class);
-                startActivity(intentbackNb);
+                Intent intentBackNb = new Intent(DataGroup.this, MainActivity.class);
+                startActivity(intentBackNb);
             }
         });
     }
