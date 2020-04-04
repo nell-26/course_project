@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
 
         findAllView();
 
+        createStudents();
+
         informationToStudents.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,5 +55,11 @@ public class MainActivity extends AppCompatActivity {
         informationToStudents = findViewById(R.id.informationToStudentsButton);
         scheduleOfSubjects = findViewById(R.id.scheduleOfSubjectsButton);
         iformationNb = findViewById(R.id.iformationNbButton);
+    }
+
+    private void createStudents () {
+        Container.addStudentP_31InList(new Student("Anastasia", "Krupa", "26.11.2001", "+380990161006", 4.56f,0));
+        Container.addStudentP_31InList(new Student("Anastasia", "Krupa", "26.11.2001", "+380990161006", 4.56f,0));
+        Container.createGroup("P_31","temp");
     }
 }
