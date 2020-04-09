@@ -6,9 +6,9 @@ public class Group {
     private String name;
     private String schedule;
     private int nb;
-    private ArrayList<Student> students;
-    private ArrayList<String> studentNames;
-    private ArrayList<Float> rate;
+    private ArrayList<Student> students = new ArrayList<>();
+    private ArrayList<String> studentNames = new ArrayList<>();
+    private ArrayList<Float> rate = new ArrayList<>();
 
     public Group (){}
 
@@ -55,4 +55,16 @@ public class Group {
     public ArrayList<Float> getRate () {return this.rate;}
 
     public void setRate (ArrayList<Float> rate) {this.rate = rate;}
+
+    @Override
+    public String toString() {
+        return "Group{" +
+                "name='" + name + '\'' +
+                ", schedule='" + schedule + '\'' +
+                ", nb=" + nb +
+                ", students=" + students +
+                ", studentNames=" + studentNames +
+                ", rate=" + rate +
+                '}';
+    }
 }

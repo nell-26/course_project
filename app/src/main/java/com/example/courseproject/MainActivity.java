@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -58,8 +59,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void createStudents () {
-        Container.addStudentP_31InList(new Student("Anastasia", "Krupa", "26.11.2001", "+380990161006", 4.56f,0));
-        Container.addStudentP_31InList(new Student("Anastasia", "Krupa", "26.11.2001", "+380990161006", 4.56f,0));
-        Container.createGroup("P_31","temp");
+        Container.addStudentInP31(new Student("Nastya", "Krupa", "26.11", "099999999", 4.6f, 0));
+        Container.addGroupInList(new Group("P-31", "shedule", Container.getStudents_P31()));
     }
 }
