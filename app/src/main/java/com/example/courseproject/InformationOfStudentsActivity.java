@@ -11,10 +11,14 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class InformationOfStudentsActivity extends AppCompatActivity {
     private Button back;
 
     private ListView listView;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,13 +42,29 @@ public class InformationOfStudentsActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(InformationOfStudentsActivity.this, "" + position,Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(InformationOfStudentsActivity.this, InformationToStudentActivity.class);
+                Group group = Container.getGroupByName(Container.getGroupNames().get(position));
+
+                ArrayList<Student> students = group.getStudents();
+
+                int index = 0;
+
+                for (Student temp : students) {
+                    intent.putExtra("student_name" + index, temp.getName());
+                    intent.putExtra("student_rate" + index, temp.getRate());
+                    intent.putExtra("student_surName" + index, temp.getRate());
+                    index++;
+                }
+                intent.putExtra("student_count", index);
+
+                startActivity(intent);
             }
         });
     }
 
     private void findAllView () {
         back = findViewById(R.id.backButton);
-       // listView = findViewById(R.id.listOfGroup);
+        listView = findViewById(R.id.listOfGroup);
     }
 }
+

@@ -13,6 +13,8 @@ public class MainActivity extends AppCompatActivity {
     private Button scheduleOfSubjects;
     private Button iformationNb;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +22,13 @@ public class MainActivity extends AppCompatActivity {
 
         findAllView();
 
-        createStudents();
+        if(Container.isGroupExist) {
+
+        } else {
+            createStudents();
+            Container.isGroupExist = true;
+        }
+
 
         informationToStudents.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,5 +88,9 @@ public class MainActivity extends AppCompatActivity {
         Container.addStudentInP31(new Student("Nazar", "Stefurak", "00/00/0000", "0000000000", 4.6f, 0));
         Container.addStudentInP31(new Student("Oleg", "Tremtiachyj", "00/00/0000", "0000000000", 4.6f, 0));
         Container.addGroupInList(new Group("P-31", "shedule", Container.getStudents_P31()));
+
+        Container.addStudentInP32(new Student("Nastya", "Krupa", "26.11.2001", "0989516668", 4.6f, 0));
+        Container.addGroupInList(new Group("P-32", "shedule", Container.getStudents_P32()));
     }
 }
+

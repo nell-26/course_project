@@ -3,13 +3,21 @@ package com.example.courseproject;
 import java.util.ArrayList;
 
 public class Container {
+    public static boolean isGroupExist = false;
+
     private static ArrayList<Student> students_P31 = new ArrayList<>();
+
+    private static ArrayList<Student> students_P32 = new ArrayList<>();
 
     private static ArrayList<Group> groups = new ArrayList<>();
 
     // додаємо нового студена до списку
     public static void addStudentInP31 (Student student) {
         students_P31.add(student);
+    }
+
+    public static void addStudentInP32 (Student student) {
+        students_P32.add(student);
     }
 
     // додаємо нову групу до списку
@@ -27,9 +35,13 @@ public class Container {
         return new Group();
     }
 
-    // отримуємо групу P-31
+    // отримуємо список студентів P-31
     public static ArrayList<Student> getStudents_P31 () {
         return students_P31;
+    }
+
+    public static ArrayList<Student> getStudents_P32 () {
+        return students_P32;
     }
 
     //
