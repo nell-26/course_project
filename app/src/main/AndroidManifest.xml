@@ -11,10 +11,9 @@
         android:theme="@style/AppTheme">
         <activity android:name=".DataGroup"></activity>
         <activity android:name=".DateNb" />
-        <activity android:name=".InformIteamGroup" />
         <activity android:name=".ScheduleOfItems" />
-        <activity android:name=".InformGroup" />
         <activity android:name=".InformationOfStudentsActivity" />
+        <activity android:name=".InformationToStudentActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

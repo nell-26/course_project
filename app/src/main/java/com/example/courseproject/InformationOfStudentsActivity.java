@@ -52,7 +52,7 @@ public class InformationOfStudentsActivity extends AppCompatActivity {
                 for (Student temp : students) {
                     intent.putExtra("student_name" + index, temp.getName());
                     intent.putExtra("student_rate" + index, temp.getRate());
-                    intent.putExtra("student_surName" + index, temp.getRate());
+                    intent.putExtra("student_surName" + index, temp.getSurName());
                     index++;
                 }
                 intent.putExtra("student_count", index);

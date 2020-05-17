@@ -22,7 +22,7 @@ public class InformationToStudentActivity extends AppCompatActivity {
         int studentCount = arguments.getInt("student_count");
 
         for (int i = 0; i < studentCount; i++) {
-            text += arguments.getString("student_name" + i) + "  "+ arguments.getString("student_surName") + arguments.getFloat("student_rate" + i) + "\n";
+            text += arguments.getString("student_name" + i) + "  "+ arguments.getString("student_surName" + i) + " " + arguments.getFloat("student_rate" + i) + "\n";
         }
 
         rateText.setText(text);
