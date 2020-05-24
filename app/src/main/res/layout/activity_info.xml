@@ -7,7 +7,7 @@
     tools:context=".infoActivity">
 
     <Button
-        android:id="@+id/badbutton"
+        android:id="@+id/backButtonInfo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Назад"
@@ -20,7 +20,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="@string/info"
-        app:layout_constraintBottom_toTopOf="@+id/badbutton"
+        app:layout_constraintBottom_toTopOf="@+id/backButtonInfo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
